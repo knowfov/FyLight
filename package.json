@@ -1,0 +1,39 @@
+{
+  "name": "fylight",
+  "version": "0.1.0",
+  "description": "fyLight",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "powershell -Command \"Get-Process fyLight -ErrorAction SilentlyContinue | Stop-Process -Force\"; electron-builder"
+  },
+  "build": {
+    "appId": "com.fylight.optimizer",
+    "productName": "fyLight",
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "allowScripts": {
+    "electron@31.7.7": true
+  },
+  "dependencies": {
+    "systeminformation": "^5.33.8"
+  },
+  "devDependencies": {
+    "electron": "^44.2.0",
+    "electron-builder": "^26.15.3"
+  }
+}
