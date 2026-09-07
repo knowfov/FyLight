@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+*.log
+.idea/
+package-lock.json
+firebase-auth.json
+settings.json
+builds.json
